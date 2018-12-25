@@ -1,0 +1,32 @@
+
+                        <html>
+                        <body>
+
+                            <h2>Assignment 4 Summary</h2>
+
+                        <p id = "demo"></p>
+                        <p id = "demo2"></p>
+                        <p id = "demo3"></p>
+
+                        <script>
+                        var text = '{"lineCount": 54, "identifiers": ["cave", "move", "X", "SqY", "forward", "Y", "is", "SqX", "up", "down", "contains", "RectX", "RectY", "Width", "Height", "doesItContain", "false", "H", "A", "B", "C", "D", "T", "not_member", "Head", "Tail", "fly", "Cave", "CaveWidth", "CaveHeight", "CurrState", "Path", "CurrX", "Visited", "NextState", "New_Visited"], "name": "Assignment4", "relAddress": "a4/Assignment4.pl"}';
+                        obj = JSON.parse(text);
+                        document.getElementById("demo").innerHTML =
+                        "Name: " + obj.name;
+                        document.getElementById("demo2").innerHTML =
+                        "Line Count: " + obj.lineCount;
+
+                        var i;
+                        var x = "";
+                        for (i in obj.identifiers){
+                            x+= "<br>"+ obj.identifiers[i] ;
+                        }
+
+                        document.getElementById("demo3").innerHTML = 
+                        "Identifiers: " + x ;
+
+                        </script>
+
+                        </body>
+                        </html>
+                        

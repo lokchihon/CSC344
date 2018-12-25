@@ -1,0 +1,32 @@
+
+                        <html>
+                        <body>
+
+                            <h2>Assignment 3 Summary</h2>
+
+                        <p id = "demo"></p>
+                        <p id = "demo2"></p>
+                        <p id = "demo3"></p>
+
+                        <script>
+                        var text = '{"lineCount": 148, "identifiers": ["import", "scala", "util", "parsing", "combinator", "abstract", "class", "Tree", "case", "E", "l", "extends", "And", "r", "Or", "Not", "Var", "str", "String", "Bool", "b", "Boolean", "object", "Combinators", "def", "eval", "t", "match", "val", "evalE", "evalAndl", "evalAndr", "true", "false", "a", "evalOrl", "evalOrr", "evalNota", "evalStr", "evalStrE", "evalStrl", "evalStrr", "toString", "main", "args", "Array", "line", "while", "print", "io", "StdIn", "readLine", "if", "System", "exit", "exp", "parseAll", "Ep", "get", "println", "JavaTokenParsers", "Parser", "T", "orc", "p", "F", "andc", "notc", "A", "leftP", "rightP", "m", "C", "trueB", "falseB", "c", "varname"], "name": "Assignment3", "relAddress": "a3/Assignment3.scala"}';
+                        obj = JSON.parse(text);
+                        document.getElementById("demo").innerHTML =
+                        "Name: " + obj.name;
+                        document.getElementById("demo2").innerHTML =
+                        "Line Count: " + obj.lineCount;
+
+                        var i;
+                        var x = "";
+                        for (i in obj.identifiers){
+                            x+= "<br>"+ obj.identifiers[i] ;
+                        }
+
+                        document.getElementById("demo3").innerHTML = 
+                        "Identifiers: " + x ;
+
+                        </script>
+
+                        </body>
+                        </html>
+                        

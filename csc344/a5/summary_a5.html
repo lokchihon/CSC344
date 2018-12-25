@@ -1,0 +1,32 @@
+
+                        <html>
+                        <body>
+
+                            <h2>Assignment 5 Summary</h2>
+
+                        <p id = "demo"></p>
+                        <p id = "demo2"></p>
+                        <p id = "demo3"></p>
+
+                        <script>
+                        var text = '{"lineCount": 489, "identifiers": ["import", "subprocess", "os", "re", "json", "zipfile", "shutil", "def", "createAndEditJSon", "currDir", "for", "name", "in", "listdir", "if", "path", "isdir", "join", "with", "open", "data", "load", "f", "relAddress", "lineCount", "doWC", "identifiers", "getIds", "seek", "dump", "truncate", "createHTML", "defHTML", "dumps", "jd", "close", "filePath", "numLines", "line", "return", "listOfIds", "endswith", "fil", "lstrip", "split", "indexOf", "find", "newLine", "while", "len", "break", "lineList", "findall", "r", "w", "bool", "search", "append", "else", "not", "count", "next", "elif", "removeDuplicates", "removeEmptyIds", "listOfStuff", "output", "seen", "set", "stuff", "add", "__name__", "input", "make_archive", "email", "command", "uuencode", "zip", "system"], "name": "Assignment5", "relAddress": "a5/Assignment5.py"}';
+                        obj = JSON.parse(text);
+                        document.getElementById("demo").innerHTML =
+                        "Name: " + obj.name;
+                        document.getElementById("demo2").innerHTML =
+                        "Line Count: " + obj.lineCount;
+
+                        var i;
+                        var x = "";
+                        for (i in obj.identifiers){
+                            x+= "<br>"+ obj.identifiers[i] ;
+                        }
+
+                        document.getElementById("demo3").innerHTML = 
+                        "Identifiers: " + x ;
+
+                        </script>
+
+                        </body>
+                        </html>
+                        
